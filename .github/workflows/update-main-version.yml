@@ -7,6 +7,7 @@ on:
       target:
         description: The tag or reference to use
         required: true
+        default: "main"
       release_tag:
         type: string
         description: "Release version, ex: v3.x.x"
