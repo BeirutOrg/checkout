@@ -13,6 +13,10 @@ on:
         description: "Release version, ex: v3.x.x"
         required: true
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.inputs.release_tag }}
+  cancel-in-progress: true
+
 jobs:
   tag:
     runs-on: ubuntu-latest
